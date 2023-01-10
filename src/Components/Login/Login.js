@@ -1,23 +1,26 @@
-import React, { useContext, useState } from 'react';
-import {useHistory} from 'react-router-dom'
-import Logo from '../../olx-logo.png';
-import { FirebaseContext } from '../../store/Contex';
-import './Login.css';
+import React, { useContext, useState } from "react";
+import { useHistory } from "react-router-dom";
+import Logo from "../../olx-logo.png";
+import { FirebaseContext } from "../../store/Contex";
+import "./Login.css";
 
 function Login() {
-  const history = useHistory()
-  const [email,setEmail] = useState('')
-  const [password,setPassword] = useState('')
-  const {firebase} = useContext(FirebaseContext)
-  const handleLogin = (e)=>{
-    e.preventDefault()
-    firebase.auth().signInWithEmailAndPassword(email,password).then(()=>{
-      history.push('/')
-    }).catch((error)=>{
-      alert(error.message)
-    })
-
-  }
+  const history = useHistory();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { firebase } = useContext(FirebaseContext);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        history.push("/");
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
   return (
     <div>
       <div className="loginParentDiv">
@@ -29,7 +32,7 @@ function Login() {
             className="input"
             type="email"
             value={email}
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             id="fname"
             name="email"
             defaultValue="John"
@@ -41,7 +44,7 @@ function Login() {
             className="input"
             type="password"
             value={password}
-            onChange={(e)=>setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             id="lname"
             name="password"
             defaultValue="Doe"
@@ -50,7 +53,10 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <p>Create Account</p>
+        <button onClick={()=>{
+          history.push('/signup')
+        }}>Signup</button>
       </div>
     </div>
   );
