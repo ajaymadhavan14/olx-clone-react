@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import './Create.css';
-import Header from '../Header/Header';
+import React, { Fragment } from "react";
+import "./Create.css";
+import Header from "../Header/Header";
 
 const Create = () => {
   return (
@@ -15,7 +15,7 @@ const Create = () => {
               className="input"
               type="text"
               id="fname"
-              name="Name"
+              name="name"
               defaultValue="John"
             />
             <br />
