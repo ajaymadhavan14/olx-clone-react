@@ -55,6 +55,7 @@ const Create = () => {
             id="fname"
             name="name"
             defaultValue="John"
+            required
           />
           <br />
           <label htmlFor="fname">Category</label>
@@ -69,6 +70,7 @@ const Create = () => {
             id="fname"
             name="category"
             defaultValue="John"
+            required
           />
           <br />
           <label htmlFor="fname">Price</label>
@@ -82,6 +84,7 @@ const Create = () => {
             }}
             id="fname"
             name="Price"
+            required
           />
           <br />
 
@@ -99,6 +102,7 @@ const Create = () => {
               setImage(e.target.files[0]);
             }}
             type="file"
+            required
           />
           <br />
           <button onClick={handleSubmit} className="uploadBtn">

@@ -36,6 +36,7 @@ function Login() {
             id="fname"
             name="email"
             defaultValue="John"
+            required
           />
           <br />
           <label htmlFor="lname">Password</label>
@@ -48,6 +49,7 @@ function Login() {
             id="lname"
             name="password"
             defaultValue="Doe"
+            required
           />
           <br />
           <br />

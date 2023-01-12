@@ -49,6 +49,7 @@ export default function Signup() {
             id="fname"
             name="name"
             defaultValue="John"
+            required
           />
           <br />
           <label htmlFor="Ename">Email</label>
@@ -61,6 +62,7 @@ export default function Signup() {
             id="Ename"
             name="email"
             defaultValue="John"
+            required
           />
           <br />
           <label htmlFor="lname">Phone</label>
@@ -73,6 +75,7 @@ export default function Signup() {
             id="lname"
             name="phone"
             defaultValue="Doe"
+            required
           />
           <br />
           <label htmlFor="Pname">Password</label>
@@ -85,6 +88,7 @@ export default function Signup() {
             id="Pname"
             name="password"
             defaultValue="Doe"
+            required
           />
           <br />
           <br />
