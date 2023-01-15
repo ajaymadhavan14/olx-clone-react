@@ -37,7 +37,7 @@ export default function Signup() {
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo} ></img>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
@@ -94,14 +94,9 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        {/* <a>Login</a> */}
-        {/* <button onClick={()=>{
-          firebase.firestore().collection('products').get().then(snapshot=>{
-            snapshot.forEach(obj => {
-              console.log(obj.data());
-            });
-          })
-        }}>Chumma</button> */}
+        <button onClick={()=>{
+          history.push('/login')
+        }}>Login</button>
       </div>
     </div>
   );
