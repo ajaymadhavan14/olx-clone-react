@@ -24,7 +24,7 @@ function Login() {
   return (
     <div>
       <div className="loginParentDiv">
-        <img width="200px" height="200px" src={Logo}></img>
+        <img width="200px" height="200px" src={Logo} alt="OLX Logo"></img>
         <form onSubmit={handleLogin}>
           <label htmlFor="fname">Email</label>
           <br />
@@ -56,9 +56,13 @@ function Login() {
           <button>Login</button>
         </form>
         <p>Create Account</p>
-        <button onClick={()=>{
-          history.push('/signup')
-        }}>Signup</button>
+        <button
+          onClick={() => {
+            history.push("/signup");
+          }}
+        >
+          Signup
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 
-import Logo from '../../olx-logo.png';
+import Logo from "../../olx-logo.png";
 
 import { FirebaseContext } from "../../store/Contex";
 import "./Signup.css";
@@ -37,7 +37,7 @@ export default function Signup() {
   return (
     <div>
       <div className="signupParentDiv">
-        <img width="200px" height="200px" src={Logo} ></img>
+        <img width="200px" height="200px" src={Logo} alt="OLX-LOGO"></img>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Username</label>
           <br />
@@ -94,9 +94,13 @@ export default function Signup() {
           <br />
           <button>Signup</button>
         </form>
-        <button onClick={()=>{
-          history.push('/login')
-        }}>Login</button>
+        <button
+          onClick={() => {
+            history.push("/login");
+          }}
+        >
+          Login
+        </button>
       </div>
     </div>
   );

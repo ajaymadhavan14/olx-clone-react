@@ -26,7 +26,7 @@ function Posts() {
         });
         setProducts(allPost);
       });
-  }, []);
+  }, [firebase]);
   return (
     <div className="postParentDiv">
       <div className="moreView">
@@ -68,35 +68,34 @@ function Posts() {
           <span>Fresh recommendations</span>
         </div>
         <div className="cards">
-
-        <div className="cards">
-          {products.map((product) => {
-            return (
-              <div
-                className="card"
-                onClick={() => {
-                  setPostDetails(product);
-                  history.push("/view");
-                }}
-              >
-                <div className="favorite">
-                  <Heart></Heart>
+          <div className="cards">
+            {products.map((product) => {
+              return (
+                <div
+                  className="card"
+                  onClick={() => {
+                    setPostDetails(product);
+                    history.push("/view");
+                  }}
+                >
+                  <div className="favorite">
+                    <Heart></Heart>
+                  </div>
+                  <div className="image">
+                    <img src={product.url} alt="" />
+                  </div>
+                  <div className="content">
+                    <p className="rate">&#x20B9; {product.price}</p>
+                    <span className="kilometer"> {product.name}</span>
+                    <p className="name">{product.category}</p>
+                  </div>
+                  <div className="date">
+                    <span>{product.createdAt}</span>
+                  </div>
                 </div>
-                <div className="image">
-                  <img src={product.url} alt="" />
-                </div>
-                <div className="content">
-                  <p className="rate">&#x20B9; {product.price}</p>
-                  <span className="kilometer"> {product.name}</span>
-                  <p className="name">{product.category}</p>
-                </div>
-                <div className="date">
-                  <span>{product.createdAt}</span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
 
           {/* <div className="card">
             <div className="favorite">
