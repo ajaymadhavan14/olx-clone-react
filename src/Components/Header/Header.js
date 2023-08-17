@@ -87,7 +87,7 @@ function Header() {
               onClick={() => {
                 // eslint-disable-next-line no-lone-blocks
                 {
-                  user ? history.push("/create") : history.push("/login")
+                  user ? history.push("/create") : history.push("/login");
                 }
               }}
             >
